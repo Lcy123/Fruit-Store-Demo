@@ -1,6 +1,7 @@
 package com.example.lcy.fruitstoredemo.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lcy.fruitstoredemo.R;
+import com.example.lcy.fruitstoredemo.activity.HomeDetailActivity;
 import com.example.lcy.fruitstoredemo.bean.eat.EatBean;
 import com.squareup.picasso.Picasso;
 
@@ -59,6 +61,7 @@ public class HomePageFragmentAdapter extends BaseAdapter {
         viewHolder.home_title.setText(feedsBeen.get(position).getTitle());
         Picasso.with(context).load(feedsBeen.get(position).getPublisher_avatar()).into(viewHolder.publisherImage);
         Picasso.with(context).load(feedsBeen.get(position).getCard_image()).into(viewHolder.card_image);
+        initEvent(convertView,feedsBeen.get(position).getItem_id());
         return convertView;
     }
     class ViewHolder{
@@ -75,5 +78,16 @@ public class HomePageFragmentAdapter extends BaseAdapter {
             ButterKnife.bind(this,view);
             view.setTag(this);
         }
+    }
+
+    private void initEvent(View convertView,final int id){
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, HomeDetailActivity.class);
+                intent.putExtra("id",id);
+                context.startActivity(intent);
+            }
+        });
     }
 }
