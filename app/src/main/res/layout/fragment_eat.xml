@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.eat.EatFragment">
+
+    <RelativeLayout
+        android:id="@+id/eat_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="逛吃" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/eat_split1"
+        android:layout_below="@+id/eat_rl"
+        android:background="#6A6A6A"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/eat_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/eat_split1">
+
+    </android.support.design.widget.TabLayout>
+
+
+    <View
+        android:id="@+id/eat_split2"
+        android:layout_below="@+id/eat_tab"
+        android:background="#6A6A6A"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/eat_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/eat_split2">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lcy.fruitstoredemo.fragment.eat.HomePageFragment">
+
+    <com.example.lcy.fruitstoredemo.utils.MyGridView
+        android:id="@+id/home_gridView"
+        android:layout_width="match_parent"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="match_parent">
+
+    </com.example.lcy.fruitstoredemo.utils.MyGridView>
+
+</ScrollView>

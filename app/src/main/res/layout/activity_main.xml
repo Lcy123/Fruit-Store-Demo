@@ -3,7 +3,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lcy.fruitstoredemo.MainActivity">
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_relative"
+        android:layout_above="@+id/main_split"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/main_split"
+        android:layout_above="@+id/main_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+
+    <RadioGroup
+        android:id="@+id/main_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/eat_rt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:text="逛吃"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/main_button_eat"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/food_rt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="食物百科"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/main_button_food"
+            android:layout_height="wrap_content" />
+        <RadioButton
+        android:id="@+id/my_rt"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:button="@null"
+        android:text="我的"
+        android:gravity="center_horizontal"
+        android:drawableTop="@drawable/main_button_my"
+        android:layout_height="wrap_content" />
+    </RadioGroup>
+
 
 
 </RelativeLayout>
