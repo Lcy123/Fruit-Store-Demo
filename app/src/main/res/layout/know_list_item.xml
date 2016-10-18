@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginBottom="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="100dp">
+
+       <RelativeLayout
+           android:layout_marginRight="20dp"
+           android:layout_toLeftOf="@+id/know_list_image"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+               android:id="@+id/know_list_title"
+               android:text="title"
+               android:textSize="15dp"
+               android:layout_alignParentLeft="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+           <TextView
+               android:id="@+id/know_list_source"
+               android:text="source"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="10dp"
+               android:textSize="12dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <TextView
+               android:id="@+id/know_list_agree"
+               android:text="num"
+               android:drawableLeft="@mipmap/ic_watch"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="10dp"
+               android:textSize="12dp"
+               android:layout_toRightOf="@+id/know_list_source"
+              android:layout_alignParentRight="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </RelativeLayout>
+
+
+       <ImageView
+           android:id="@+id/know_list_image"
+           android:layout_alignParentRight="true"
+           android:layout_centerVertical="true"
+           android:scaleType="centerCrop"
+           android:background="@mipmap/ic_launcher"
+           android:layout_width="150dp"
+           android:layout_height="90dp" />
+
+   </RelativeLayout>
+
+
+</RelativeLayout>

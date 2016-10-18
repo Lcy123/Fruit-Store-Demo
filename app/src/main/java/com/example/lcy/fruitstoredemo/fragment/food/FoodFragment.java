@@ -27,4 +27,5 @@ public class FoodFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_food, container, false);
     }
 
+
 }

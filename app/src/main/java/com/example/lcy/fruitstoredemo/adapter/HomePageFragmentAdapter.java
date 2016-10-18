@@ -2,6 +2,7 @@ package com.example.lcy.fruitstoredemo.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,11 +60,16 @@ public class HomePageFragmentAdapter extends BaseAdapter {
         }
         viewHolder.publisher.setText(feedsBeen.get(position).getPublisher());
         viewHolder.home_title.setText(feedsBeen.get(position).getTitle());
+        //viewHolder.home_agree.setText(feedsBeen.get(position).getLike_ct());
+
         Picasso.with(context).load(feedsBeen.get(position).getPublisher_avatar()).into(viewHolder.publisherImage);
         Picasso.with(context).load(feedsBeen.get(position).getCard_image()).into(viewHolder.card_image);
+
         initEvent(convertView,feedsBeen.get(position).getItem_id());
+        Log.e("====","==gid=="+feedsBeen.get(position).getItem_id());
         return convertView;
     }
+
     class ViewHolder{
         @BindView(R.id.home_card_image)
         ImageView card_image;
@@ -73,6 +79,9 @@ public class HomePageFragmentAdapter extends BaseAdapter {
         TextView publisher;
         @BindView(R.id.home_title)
         TextView home_title;
+
+//        @BindView(R.id.home_agree)
+//        TextView home_agree;
 
         public ViewHolder(View view) {
             ButterKnife.bind(this,view);
@@ -86,6 +95,7 @@ public class HomePageFragmentAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Intent intent = new Intent(context, HomeDetailActivity.class);
                 intent.putExtra("id",id);
+                Log.e("====","==id=="+id);
                 context.startActivity(intent);
             }
         });

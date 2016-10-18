@@ -10,7 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.GuideActivity" />
-        <activity android:name=".activity.HomeDetailActivity"></activity>
+        <activity android:name=".activity.HomeDetailActivity" />
+        <activity android:name=".activity.EvaDetailActivity" />
+        <activity android:name=".activity.KnowDetailActivity" />
+        <activity android:name=".activity.CateDetailActivity"></activity>
     </application>
 
 </manifest>

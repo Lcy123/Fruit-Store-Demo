@@ -17,26 +17,40 @@
             android:layout_below="@+id/home_card_image"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
         <RelativeLayout
             android:layout_below="@+id/home_title"
-            android:layout_width="100dp"
+            android:layout_width="180dp"
             android:layout_height="40dp">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/home_publisherImage"
                 android:src="@mipmap/ic_launcher"
                 android:scaleType="centerCrop"
                 android:layout_centerVertical="true"
-                android:layout_width="35dp"
-                android:layout_height="35dp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
             <TextView
                 android:id="@+id/home_publisher"
                 android:text="publisher"
+                android:textSize="10dp"
+                android:singleLine="true"
                 android:layout_marginLeft="5dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/home_publisherImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <!--<TextView-->
+                <!--android:id="@+id/home_agree"-->
+                <!--android:drawableLeft="@mipmap/ic_home_agree"-->
+                <!--android:text="num"-->
+                <!--android:textSize="10dp"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true" />-->
 
         </RelativeLayout>
 
